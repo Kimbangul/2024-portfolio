@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-
+import { gsap, ScrollTrigger, useGSAP } from '@/components/register/gsap';
 import { Section } from '@/components/ui/section';
 import { project, IProjectItem, blurDataUrl } from '@/data';
 import { springOption } from '@/utils';
@@ -24,6 +24,7 @@ const Project = () => {
       </Section>
       <Section className='sub-project' autoheight={true}>
         <h2 className='sound-only'>그 외 프로젝트</h2>
+        <h3 className='sc__title'>~ 2023 Works</h3>
         <ul className='sub-project__list'>
           {otherProject.map((el, idx) => (
             <SubProjectItem {...el} key={el.key} idx={idx} />
@@ -139,25 +140,55 @@ const ProjectItem = (props: IProjectItem) => {
 };
 
 const SubProjectItem = (props: ISubProjectItemProps) => {
-  return (
-    <li className='sub-project__item'>
-      <a href={props.link} target='__blank' title={props.title}>
-        <div className='sub-project__item-num'>{`(0${props.idx + 1})`}</div>
-        <h3 className='sub-project__item-title'>{props.title}</h3>
+  const listRef = useRef(null);
+  // FUNCTION motion
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        yoyo: true,
+        paused: true,
+        repeatRefresh: true,
+        scrollTrigger: {
+          trigger: listRef.current,
+          invalidateOnRefresh: true,
+          scrub: 1,
+        },
+      });
 
-        <div className='sub-project__item-text-container'>
-          <p className='sub-project__item-desc'>{props.desc}</p>
-          <ul className='sub-project__tag'>
-            {props.tags?.map((el, idx) => (
-              <li className='sub-project__tag-item' key={`tag__${idx}-${el}`}>
-                <span className='sub-project__tag-text'>#{el}</span>
-                {/* <span className='sub-project__tag-text'>#{el}</span> */}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </a>
-    </li>
+      tl.fromTo(
+        listRef.current,
+        {
+          y: () => `20rem`,
+        },
+        {
+          y: () => `0`,
+        }
+      );
+    },
+    { scope: listRef }
+  );
+
+  return (
+    <>
+      <li className='sub-project__item' ref={listRef}>
+        <a href={props.link} target='__blank' title={props.title}>
+          <div className='sub-project__item-num'>{`(0${props.idx + 1})`}</div>
+          <h3 className='sub-project__item-title'>{props.title}</h3>
+
+          <div className='sub-project__item-text-container'>
+            <p className='sub-project__item-desc'>{props.desc}</p>
+            <ul className='sub-project__tag'>
+              {props.tags?.map((el, idx) => (
+                <li className='sub-project__tag-item' key={`tag__${idx}-${el}`}>
+                  <span className='sub-project__tag-text'>#{el}</span>
+                  {/* <span className='sub-project__tag-text'>#{el}</span> */}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </a>
+      </li>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ import { blurDataUrl } from '@/data';
 const Posts = (props: IPostsProps) => {
   return (
     <Section className='post' autoheight={true}>
-      <h2 className='post__title'>Recent Posts</h2>
+      <h2 className='sc__title'>Recent Posts</h2>
       <ul className='post__list'>
         {props.posts.map((el, idx) => (
           <PostItem {...el} key={`post__${idx}`} />

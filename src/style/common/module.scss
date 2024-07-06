@@ -33,6 +33,25 @@
       min-height: unset;
     }
   }
+
+  &__title {
+    @include util__flex(stretch, center, 1vw, column);
+    font-size: clamp(3.2rem, 3.2vw, 4rem);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1vw;
+    &::before {
+      @include util__pseudo(0.1rem, 12vw);
+      position: static;
+      background: $color__white;
+      opacity: 0.2;
+    }
+    @include tb-md {
+      font-size: clamp(2.4rem, 6.4vw, 3.2rem);
+      margin-bottom: 1.4vw;
+    }
+  }
 }
 
 .logo {

@@ -219,8 +219,17 @@
     padding-top: 0;
   }
 
+  .sc__title {
+    font-size: clamp(4rem, 4.16vw, 8rem);
+    // &::before {
+    //   @include util__pseudo(0.1rem, 12vw);
+    //   position: static;
+    //   background: $color__white;
+    //   opacity: 0.2;
+    // }
+  }
+
   &__item {
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
     position: relative;
 
     a {
@@ -255,7 +264,12 @@
       }
     }
 
-    &:last-child {
+    &:nth-child(2n) a {
+      border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+      border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+    }
+
+    &:last-child a {
       border-bottom: none;
     }
 

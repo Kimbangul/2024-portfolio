@@ -19,6 +19,7 @@
     text-align: center;
     text-transform: uppercase;
     line-height: 0.8;
+    display: block;
 
     @include tb-lg {
       font-size: min(5rem, 11.2vw);
