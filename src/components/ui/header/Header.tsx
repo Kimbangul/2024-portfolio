@@ -41,9 +41,12 @@ const Header = () => {
           </div>
           <nav className='header__nav'>
             <div className='header__clock pc-only'>
-              Seoul, Korea {getFormattedTime(time.formattedHour)}
-              <span className='header__clock-spliter'>:</span>
-              {getFormattedTime(time.min)} {time.amPm}
+              Seoul, Korea
+              <time dateTime={`${time.hour}:${time.min}`}>
+                {getFormattedTime(time.formattedHour)}
+                <span className='header__clock-spliter'>:</span>
+                {getFormattedTime(time.min)} {time.amPm}
+              </time>
             </div>
             <ul className='header__nav-list pc-only' role='menu'>
               {menu.map((el) => (

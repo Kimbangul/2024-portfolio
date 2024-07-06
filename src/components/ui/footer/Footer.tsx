@@ -13,10 +13,10 @@ const Footer = () => {
     <>
       <footer className='footer' ref={footerRef} id='contact'>
         <div className='footer__inner'>
-          <p className='footer__copy'>
+          <small className='footer__copy'>
             <span className='footer__copy-icon'>©</span>
             Park Ye rim
-          </p>
+          </small>
           <ul className='footer__info'>
             <li className='footer__info-item footer__year'>© 2024</li>
             <li className='footer__info-item'>

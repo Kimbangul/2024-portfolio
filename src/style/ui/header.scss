@@ -113,7 +113,7 @@
     }
   }
   &__clock {
-    @include util__flex(stretch, center);
+    @include util__flex(stretch, center, 0.4rem);
     padding: 0 1rem;
     &-spliter {
       animation: animation__blink 1s step-end infinite;

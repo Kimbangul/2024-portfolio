@@ -118,7 +118,7 @@ const Video = () => {
         <div className='video__info pc-only'>
           <p>Featured Reel ‘24</p>
           <button className='video__timer' onClick={onClickVideoControl}>
-            00:{remainTime}
+            <time dateTime={`00:${remainTime}`}>00:{remainTime}</time>
           </button>
         </div>
       </div>
