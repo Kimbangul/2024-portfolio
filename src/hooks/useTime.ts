@@ -1,3 +1,4 @@
+'use client';
 import { getKoreaTime } from '@/utils';
 import { useEffect, useMemo, useRef, useState } from 'react';
 

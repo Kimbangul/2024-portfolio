@@ -104,17 +104,17 @@ const Video = () => {
       <h2 className='sound-only'>상단 비디오 영역</h2>
       <div className='video__container'>
         <video
-          src='/video/main_video.mp4'
+          src='/video/main_video2.mp4'
           loop
           autoPlay={true}
           muted
           playsInline
-          poster='/image/main_poster.webp'
+          poster='/image/main_poster2.webp'
           ref={videoRef}
         ></video>
       </div>
       <div className='video__title-container' ref={titleRef}>
-        <p className='video__title'>Park Ye rim, UI Developer</p>
+        <h1 className='video__title'>Park Ye rim, UI Developer</h1>
         <div className='video__info pc-only'>
           <p>Featured Reel ‘24</p>
           <button className='video__timer' onClick={onClickVideoControl}>
