@@ -1,10 +1,26 @@
+import PROJECT14 from '/public/image/project14.webp';
 import PROJECT13 from '/public/image/project13.webp';
 import PROJECT12 from '/public/image/project12.webp';
 import PROJECT11 from '/public/image/project11.webp';
-import PROJECT07 from '/public/image/project07.webp';
-import PROJECT06 from '/public/image/project06.webp';
+// import PROJECT07 from '/public/image/project07.webp';
+// import PROJECT06 from '/public/image/project06.webp';
 
 export const project: TProject = [
+  {
+    key: 14,
+    title: 'CYLNDR',
+    subtitle: '인터랙티브 반응형 Web',
+    thumb: PROJECT14.src,
+    category: '사이트 클론코딩',
+    link: 'https://kimbangul.github.io/clynder/',
+    tags: ['퍼블리싱 100%', 'HTML', 'SCSS', 'JavaScript(ES6+)', 'GSAP'],
+    notion:
+      'https://meadow-touch-c48.notion.site/CYLNDR-a799f2227d4b448fb4e65702eae24b7b?pvs=74',
+    desc: '인터랙티브 구현에 중점을 둔 클론 코딩',
+    duration: '2024.07 ~ 2024.07',
+    section: 'CYLNDR 메인 페이지 클론코딩',
+    tool: 'HTML, SCSS, JavaScript(ES6+), GSAP',
+  },
   {
     key: 13,
     title: 'PP Fragment',
@@ -54,7 +70,7 @@ export const project: TProject = [
     key: 7,
     title: 'RebitX',
     subtitle: '상업용 부동산 조각투자 플랫폼',
-    thumb: PROJECT07.src,
+    //thumb: PROJECT07.src,
     category: '상업용 부동산 조각투자 플랫폼 구축',
     link: 'https://rebitx.com/',
     notion:
@@ -71,27 +87,27 @@ export const project: TProject = [
     section: '사용자, 관리자 페이지 전반 디자인 및 Front-end 개발 담당',
     tool: 'Figma, Next.js, SCSS, JavaScript(ES6+), MobX, Git',
   },
-  {
-    key: 6,
-    title: 'FUNCHY',
-    thumb: PROJECT06.src,
-    subtitle: '온라인 P2P 플랫폼',
-    category: '온라인 P2P 플랫폼 서비스 구축',
-    link: 'https://funchy.vercel.app/',
-    notion:
-      'https://meadow-touch-c48.notion.site/FUNCHY-P2P-00f2f5c02e5e403f831814c23bb2274b',
-    tags: [
-      '디자인 40%',
-      '프론트엔드 40%',
-      'Next.js',
-      'JavaScript(ES6+)',
-      'SCSS',
-    ],
-    desc: "핀테크 기반 온라인 P2P 플랫폼 'FUNCHY'의 사용자 및 관리자 사이트 디자인 및 Front-end 개발을 담당하였습니다. 페이지 간 통일성을 맞추는 것을 우선으로, 서비스 아이덴티티 구축을 위한 컬러 선정과 더 좋은 UX/UI적 표현 방식에 대해 팀원들과 논의하며 긴밀히 소통하였습니다.",
-    duration: '2022.07 ~ 2022.10',
-    section: '사이트 전반 디자인 및 Front-end 개발 담당',
-    tool: 'Figma, Next.js, SCSS, JavaScript(ES6+), Git',
-  },
+  // {
+  //   key: 6,
+  //   title: 'FUNCHY',
+  //   thumb: PROJECT06.src,
+  //   subtitle: '온라인 P2P 플랫폼',
+  //   category: '온라인 P2P 플랫폼 서비스 구축',
+  //   link: 'https://funchy.vercel.app/',
+  //   notion:
+  //     'https://meadow-touch-c48.notion.site/FUNCHY-P2P-00f2f5c02e5e403f831814c23bb2274b',
+  //   tags: [
+  //     '디자인 40%',
+  //     '프론트엔드 40%',
+  //     'Next.js',
+  //     'JavaScript(ES6+)',
+  //     'SCSS',
+  //   ],
+  //   desc: "핀테크 기반 온라인 P2P 플랫폼 'FUNCHY'의 사용자 및 관리자 사이트 디자인 및 Front-end 개발을 담당하였습니다. 페이지 간 통일성을 맞추는 것을 우선으로, 서비스 아이덴티티 구축을 위한 컬러 선정과 더 좋은 UX/UI적 표현 방식에 대해 팀원들과 논의하며 긴밀히 소통하였습니다.",
+  //   duration: '2022.07 ~ 2022.10',
+  //   section: '사이트 전반 디자인 및 Front-end 개발 담당',
+  //   tool: 'Figma, Next.js, SCSS, JavaScript(ES6+), Git',
+  // },
   {
     key: 9,
     title: '대아정보시스템',
@@ -105,21 +121,21 @@ export const project: TProject = [
     section: '사이트 전반 디자인 및 구현',
     tool: 'Next.js, SCSS, TypeScript, Recoil, Node.js, Git',
   },
-  {
-    key: 8,
-    title: 'RebitX Mobile',
-    subtitle: '모바일 Web App',
-    //    thumb: PROJECT08.src,
-    category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
-    link: 'https://rebit-x.vercel.app/mobile',
-    notion:
-      'https://meadow-touch-c48.notion.site/RebitX-2e919c1788d4452a94ddfd65c89dc1c0',
-    tags: ['프론트엔드 60%', 'Next.js', 'JavaScript(ES6+)', 'SCSS'],
-    desc: 'RebitX의 App 디자인을 토대로 모바일 Web 플랫폼을 제작하였습니다. 짧은 시간 내에 다양한 해상도의 모바일 디바이스를 대응할 수 있도록 rem 단위를 활용하였으며 Axios 라이브러리를 이용해 데이터 바인딩을 진행했습니다.',
-    duration: '2023.01 ~ 2023.02',
-    section: '주요 기능 및 게시판 페이지 Front-end 개발 담당',
-    tool: 'Next.js, SCSS, JavaScript(ES6+), Git',
-  },
+  // {
+  //   key: 8,
+  //   title: 'RebitX Mobile',
+  //   subtitle: '모바일 Web App',
+  //   //    thumb: PROJECT08.src,
+  //   category: '상업용 부동산 조각투자 플랫폼 웹앱 버전 구축',
+  //   link: 'https://rebit-x.vercel.app/mobile',
+  //   notion:
+  //     'https://meadow-touch-c48.notion.site/RebitX-2e919c1788d4452a94ddfd65c89dc1c0',
+  //   tags: ['프론트엔드 60%', 'Next.js', 'JavaScript(ES6+)', 'SCSS'],
+  //   desc: 'RebitX의 App 디자인을 토대로 모바일 Web 플랫폼을 제작하였습니다. 짧은 시간 내에 다양한 해상도의 모바일 디바이스를 대응할 수 있도록 rem 단위를 활용하였으며 Axios 라이브러리를 이용해 데이터 바인딩을 진행했습니다.',
+  //   duration: '2023.01 ~ 2023.02',
+  //   section: '주요 기능 및 게시판 페이지 Front-end 개발 담당',
+  //   tool: 'Next.js, SCSS, JavaScript(ES6+), Git',
+  // },
   // {
   //   key: 10,
   //   title: 'DRINKLE',

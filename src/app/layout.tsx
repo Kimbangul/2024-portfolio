@@ -51,7 +51,7 @@ export default function RootLayout({
       className={`${fontScript.variable} ${fontPretendard.variable} ${fontNeueHaasGrotesk.variable}`}
       suppressHydrationWarning
     >
-      <body>
+      <body suppressHydrationWarning>
         <GSAPRegister>
           <Header />
           {children}
