@@ -68,7 +68,7 @@ const PostItem = (props: TPostsItemProps) => {
             />
           </motion.div>
         </div>
-        <div className='post__item-date'>
+        <div className='post__item-date' suppressHydrationWarning>
           {getTimeForDay(props.released_at)}
         </div>
         <h3 className='post__item-title'>{props.title}</h3>
