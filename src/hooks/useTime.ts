@@ -12,8 +12,8 @@ export const getFormattedTime = (time: number) => {
 
 const useTime = () => {
   const timer = useRef<NodeJS.Timeout>();
-  const [hour, setHour] = useState(getKoreaTime().hour);
-  const [min, setMin] = useState(getKoreaTime().min);
+  const [hour, setHour] = useState<number>(0);
+  const [min, setMin] = useState<number>(0);
 
   useEffect(() => {
     timer.current = setInterval(() => {
@@ -24,11 +24,15 @@ const useTime = () => {
   });
 
   const amPm = useMemo(() => {
+    if (!hour) return 'AM';
     if (hour >= 12) return 'PM';
     else return 'AM';
   }, [hour]);
 
-  const formattedHour = useMemo(() => (hour <= 12 ? hour : hour - 12), [hour]);
+  const formattedHour = useMemo(() => {
+    if (!hour) return 0;
+    return hour <= 12 ? hour : hour - 12;
+  }, [hour]);
 
   return { hour, min, amPm, formattedHour };
 };
