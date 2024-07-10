@@ -204,7 +204,7 @@ const Menu = (props: IHeaderMenuProps) => {
                     </div>
                     <ul className='menu__info-list'>
                       <li className='menu__info-item'>
-                        <a href={link.mail}>highcolor9871@gmail.com</a>
+                        <a href={link.mail}>yerime.dev@gmail.com</a>
                       </li>
                     </ul>
                   </div>
