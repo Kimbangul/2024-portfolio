@@ -19,13 +19,14 @@ const getPostList = async (
     {
       method: 'post',
       body: JSON.stringify(param),
+      next: { revalidate: 3600 },
     }
   );
 
   if (!res.ok) {
     throw new Error('data fetch failed');
   }
-
+  console.log('revalidate');
   return await res.json();
 };
 
