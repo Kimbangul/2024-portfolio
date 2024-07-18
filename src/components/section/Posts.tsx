@@ -58,14 +58,16 @@ const PostItem = (props: TPostsItemProps) => {
               filter: imgMotion.filter,
             }}
           >
-            <Image
-              src={props.thumbnail}
-              fill
-              alt=''
-              placeholder='blur'
-              blurDataURL={blurDataUrl}
-              sizes='(max-width: 768px) 90vw, 32vw'
-            />
+            {props.thumbnail && (
+              <Image
+                src={props.thumbnail}
+                fill
+                alt=''
+                placeholder='blur'
+                blurDataURL={blurDataUrl}
+                sizes='(max-width: 768px) 90vw, 32vw'
+              />
+            )}
           </motion.div>
         </div>
         <div className='post__item-date'>
