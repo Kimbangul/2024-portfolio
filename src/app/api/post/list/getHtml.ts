@@ -51,7 +51,6 @@ const getHtml = async (name: string, limit: number) => {
     const html = await res.json();
     return html.data;
   } catch (e) {
-    console.log(e);
     throw new Error(`error: ${e}`);
   }
 };

@@ -8,6 +8,7 @@ import {
 } from '@/components/section';
 import { IPostsProps } from '@/components/section/Posts';
 import { Symbol } from '@/components/ui/symbol';
+import { time } from 'console';
 
 const getPostList = async (
   name: string,
@@ -19,7 +20,7 @@ const getPostList = async (
     {
       method: 'post',
       body: JSON.stringify(param),
-      next: { revalidate: 3600 },
+      next: { revalidate: 0 },
     }
   );
 
