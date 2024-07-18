@@ -21,7 +21,7 @@ const Footer = () => {
             <li className='footer__info-item footer__year'>© 2024</li>
             <li className='footer__info-item'>
               <a className='footer__info-link' href={link.mail} target='_blank'>
-                highcolor9871@gmail.com
+                yerime.dev@gmail.com
               </a>
             </li>
             <li className='footer__info-item'>

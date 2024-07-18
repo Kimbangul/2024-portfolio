@@ -33,6 +33,7 @@ const getPostList = async (
 
 export default async function Home() {
   const postData = await getPostList('kimbangul', 3);
+  console.log(postData);
 
   return (
     <main>
