@@ -20,7 +20,7 @@ const getPostList = async (
     {
       method: 'post',
       body: JSON.stringify(param),
-      next: { revalidate: 0 },
+      next: { revalidate: 3600 },
     }
   );
 
