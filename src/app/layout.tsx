@@ -2,6 +2,8 @@ import '@/style/style.scss';
 
 import Favicon from '/public/favicon.ico';
 import type { Metadata, Viewport } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 import { Header } from '@/components/ui/header';
 import {
   fontPretendard,
@@ -53,6 +55,7 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning>
         <GSAPRegister>
+          <GoogleAnalytics gaId='G-TMJ0DT1H3N' />
           <Header />
           {children}
           <Cursor />

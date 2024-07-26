@@ -8,7 +8,6 @@ import {
 } from '@/components/section';
 import { IPostsProps } from '@/components/section/Posts';
 import { Symbol } from '@/components/ui/symbol';
-import { time } from 'console';
 
 const getPostList = async (
   name: string,
