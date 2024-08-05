@@ -1,11 +1,9 @@
 .sound-only {
-  font-size: 0;
   position: absolute;
-  z-index: -9999;
-  text-indent: 9999;
   width: 1px;
   height: 1px;
   margin: -1px;
+  overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
 
