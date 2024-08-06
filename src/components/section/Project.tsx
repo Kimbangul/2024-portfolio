@@ -76,7 +76,7 @@ const ProjectItem = (props: IProjectItem) => {
         <div className='project__item-title-container'>
           <a
             href={props.link}
-            target='__blank'
+            target='_blank'
             {...linkOption}
             tabIndex={-1}
             title={props.title}
@@ -117,7 +117,7 @@ const ProjectItem = (props: IProjectItem) => {
         <motion.a
           title={props.title}
           href={props.link}
-          target='__blank'
+          target='_blank'
           {...linkOption}
           style={{
             filter: imgMotion.filter,
@@ -171,7 +171,7 @@ const SubProjectItem = (props: ISubProjectItemProps) => {
   return (
     <>
       <li className='sub-project__item' ref={listRef}>
-        <a href={props.link} target='__blank' title={props.title}>
+        <a href={props.link} target='_blank' title={props.title}>
           <div className='sub-project__item-num'>{`(0${props.idx + 1})`}</div>
           <h3 className='sub-project__item-title'>{props.title}</h3>
 

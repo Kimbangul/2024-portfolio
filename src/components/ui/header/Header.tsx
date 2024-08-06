@@ -35,7 +35,8 @@ const Header = () => {
         <div className='header__inner'>
           <div className='header__logo'>
             <a href='/' title='홈으로'>
-              <LOGO className='logo' title='Yerim.e' />
+              <span className='sound-only'>Yerim.e</span>
+              <LOGO className='logo'/>
             </a>
           </div>
           <nav className='header__nav'>
