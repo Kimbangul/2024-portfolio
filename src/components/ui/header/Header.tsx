@@ -36,7 +36,7 @@ const Header = () => {
           <div className='header__logo'>
             <a href='/' title='홈으로'>
               <span className='sound-only'>Yerim.e</span>
-              <LOGO className='logo'/>
+              <LOGO className='logo' />
             </a>
           </div>
           <nav className='header__nav'>
@@ -74,11 +74,11 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               <span className='header__nav-opener-inner'>
-              <div className='header__nav-opener-title'>Menu</div>
-              <div
-                className='header__nav-opener-icon'
-                data-isopen={isMenuOpen}
-              ></div>
+                <div className='header__nav-opener-title'>Menu</div>
+                <div
+                  className='header__nav-opener-icon'
+                  data-isopen={isMenuOpen}
+                ></div>
               </span>
             </button>
           </nav>
@@ -179,7 +179,7 @@ const Menu = (props: IHeaderMenuProps) => {
               exit='exit'
               ref={menuRef}
             >
-              <div className='menu__inner'>
+              <div className='menu__inner' id='menu'>
                 <ul className='menu__list' role='menu'>
                   {menu.map((el) => (
                     <li
