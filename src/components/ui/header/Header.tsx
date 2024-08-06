@@ -73,13 +73,11 @@ const Header = () => {
               aria-controls='menu'
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <span className='header__nav-opener-inner'>
-                <div className='header__nav-opener-title'>Menu</div>
-                <div
-                  className='header__nav-opener-icon'
-                  data-isopen={isMenuOpen}
-                ></div>
-              </span>
+              <span className='header__nav-opener-title'>Menu</span>
+              <span
+                className='header__nav-opener-icon'
+                data-isopen={isMenuOpen}
+              ></span>
             </button>
           </nav>
         </div>
