@@ -57,7 +57,8 @@
           z-index: -1;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: $color__white;
           &::after {
             transform: scaleX(1);
@@ -163,7 +164,8 @@
     overflow: hidden;
     &-link {
       @include util__flex(stretch, center, 1.25rem);
-      &:hover {
+      &:hover,
+      &:focus {
         #{$menu}__item-link-text::after {
           transform: scaleX(0);
         }
@@ -209,7 +211,8 @@
         @include util__flex(stretch, center, 0.5rem);
         text-decoration: underline;
 
-        &:hover {
+        &:hover,
+        &:focus {
           text-decoration: none;
 
           .icon__link-inner {

@@ -148,10 +148,20 @@ const Menu = (props: IHeaderMenuProps) => {
 
   useEffect(() => {
     const html = document.querySelector('html');
+    const firstMenu = document.querySelector(
+      '.menu__item-link:first-child'
+    ) as HTMLAnchorElement;
+
     if (!html) return;
     if (props.isOpen) {
       html.style.height = '100vh';
       html.style.overflowY = 'hidden';
+      // FUNCTION 모달이 열렸을 경우, 모달로 포커스 이동 처리
+
+      if (firstMenu) {
+        console.log(firstMenu);
+        firstMenu.focus();
+      }
     } else {
       html.style.height = 'auto';
       html.style.overflowY = 'visible';

@@ -35,7 +35,8 @@
     text-decoration: underline;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
     }
   }
@@ -73,7 +74,8 @@
       margin-top: 0.4rem;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: none;
 
       .icon__down-inner {

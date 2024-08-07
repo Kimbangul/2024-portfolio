@@ -61,6 +61,8 @@ const ProjectItem = (props: IProjectItem) => {
   const linkOption = {
     onMouseOver: () => setIsHover(true),
     onMouseOut: () => setIsHover(false),
+    onFocus: () => setIsHover(true),
+    onBlur: () => setIsHover(false),
   };
 
   return (
@@ -78,7 +80,6 @@ const ProjectItem = (props: IProjectItem) => {
             href={props.link}
             target='_blank'
             {...linkOption}
-            tabIndex={-1}
             title={props.title}
           >
             <h3 className='project__item-title'>{props.title}</h3>
@@ -90,6 +91,7 @@ const ProjectItem = (props: IProjectItem) => {
               target='_blank'
               href={props.link}
               title={props.title}
+              tabIndex={-1}
               {...linkOption}
             >
               View Project →
@@ -118,6 +120,7 @@ const ProjectItem = (props: IProjectItem) => {
           title={props.title}
           href={props.link}
           target='_blank'
+          tabIndex={-1}
           {...linkOption}
           style={{
             filter: imgMotion.filter,
