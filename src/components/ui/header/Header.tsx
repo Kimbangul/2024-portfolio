@@ -171,13 +171,14 @@ const Menu = (props: IHeaderMenuProps) => {
           >
             <motion.div
               className='menu'
+              id='menu'
               variants={menuAnimation}
               initial='initial'
               animate='animate'
               exit='exit'
               ref={menuRef}
             >
-              <div className='menu__inner' id='menu'>
+              <div className='menu__inner'>
                 <ul className='menu__list' role='menu'>
                   {menu.map((el) => (
                     <li
