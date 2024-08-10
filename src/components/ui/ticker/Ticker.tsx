@@ -1,9 +1,14 @@
 import { PropsWithChildren } from 'react';
 
-const Ticker: React.FC<PropsWithChildren> = (props) => {
+interface ITickerProps extends PropsWithChildren {
+  title?: string
+}
+
+const Ticker: React.FC<ITickerProps> = (props) => {
+
   return (
-    <div className='ticker'>
-      <ul className='ticker__inner'>
+    <div className='ticker' aria-label={props.title}>
+      <ul className='ticker__inner' aria-hidden="true">
         {props.children}
         {props.children}
         {props.children}

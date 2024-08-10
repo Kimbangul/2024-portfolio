@@ -53,7 +53,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <Ticker>
+        <Ticker title={tickerData.join(',')}>
           {tickerData.map((el, idx) => (
             <li className='ticker__item' key={`ticker__${idx}`}>
               {el}
