@@ -3,6 +3,7 @@ import '@/style/style.scss';
 import Favicon from '/public/favicon.ico';
 import type { Metadata, Viewport } from 'next';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import { Header } from '@/components/ui/header';
 import {
@@ -62,6 +63,7 @@ export default function RootLayout({
           <Footer />
         </GSAPRegister>
         <RenisScroll />
+        <Analytics />
       </body>
     </html>
   );
